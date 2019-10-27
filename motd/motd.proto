@@ -1,0 +1,12 @@
+syntax = "proto3";
+service motd {
+    rpc motd (motdRequest) returns (motdResponse) {}
+}
+
+message motdRequest {
+    string topic = 1;
+}
+
+message motdResponse {
+    string motd = 1;
+}
