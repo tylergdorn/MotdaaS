@@ -21,7 +21,7 @@ func main() {
 	m := loadTopics(box)
 	log.Printf("Loaded %d topics", len(m))
 
-	s := motd.Server{Topics: m}
+	s := motd.Server{TopicsMap: m}
 	grpcServer := grpc.NewServer()
 
 	motd.RegisterMotdServer(grpcServer, &s)

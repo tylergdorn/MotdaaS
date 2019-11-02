@@ -1,2 +1,2 @@
-server/topics
+server/topics/*
 motd/*.pb.go

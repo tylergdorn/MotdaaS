@@ -1,6 +1,7 @@
 syntax = "proto3";
 service motd {
     rpc motd (motdRequest) returns (motdResponse) {}
+    rpc topics (topicEnumRequest) returns (topicEnumResponse) {}
 }
 
 message motdRequest {
@@ -9,4 +10,12 @@ message motdRequest {
 
 message motdResponse {
     string motd = 1;
+}
+
+message topicEnumRequest {
+
+}
+
+message topicEnumResponse {
+    repeated string topics = 1;
 }
